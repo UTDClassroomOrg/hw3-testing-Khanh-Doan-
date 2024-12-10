@@ -63,7 +63,7 @@ g) Measure the code coverage using a code coverage tools such as EclEmma. Your t
    ![](https://github.com/UTDClassroomOrg/hw3-testing-Khanh-Doan-/blob/main/coverage.png)
 
    # Sources:
-- Dr. Kung Book Chapter 20 (Black Box)
+- Dr. Kung Book Chapter 20 
 - Eclipse with JUnit Test
 - https://www.youtube.com/watch?v=v2F49zLLj-8
   
