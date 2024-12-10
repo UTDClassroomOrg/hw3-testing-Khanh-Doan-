@@ -45,8 +45,6 @@ c) Identify and specify the partitions and generate partition test cases.
 
 d) Generate boundary value test cases.
 
-## d. Boundary Value Test Cases
-
 | Test Case # | Input (`k`, `list`)           | Expected Output | Boundary Condition              |
 |-------------|-------------------------------|-----------------|---------------------------------|
 | 1           | `k=0, list=[1, 2, 3]`        | `0`             | Minimum value of `k`            |
@@ -54,11 +52,18 @@ d) Generate boundary value test cases.
 | 3           | `k=5, list=[10, 20]`         | `15`            | `k > array.length`              |
 
 e) Implement the average function in a class Average and generate test cases using Junit. (Please also submit this part of the assignment in your individual GitHub classroom code)
+[Link](https://github.com/UTDClassroomOrg/hw3-testing-Khanh-Doan-/tree/main/src/average)
 
 f) Compile and run the test cases. Record any failures and errors that are reported. Analyze and briefly explain why each of the failures and errors occurs and how you fix them. Correct all the failures and errors until the CUT (Component Under Test) passes all the test cases.
-   1. In case there is no failiure, please inject a fault yourself and complete the section f. (That means you need to inject a fault in this average method, and see if your tests can find the fault. For example, instead of i=0, change the code to i=1, or instead of min , use max .. these faults cause the function to not behave as you describe in the section a, and since you design your tests according to this description , your test should be able to reveal the fault and fail. but if your test did not fail after you inject the fault, then you need to redesign and add a new test to reveal your injected fault.)
+   1. In case there is no failure, please inject a fault yourself and complete the section f. (That means you need to inject a fault in this average method, and see if your tests can find the fault. For example, instead of i=0, change the code to i=1, or instead of min , use max .. these faults cause the function to not behave as you describe in the section a, and since you design your tests according to this description, your test should be able to reveal the fault and fail. but if your test did not fail after you inject the fault, then you need to redesign and add a new test to reveal your injected fault.)
+      
+      I injected a mistake myself when changing the loop index of the average method. To find the sum of the first k elements of the array, the loop started at i = 0. However, the first element of the array was excluded from the sum after the error was added by changing i = 0 to i = 1. This caused the process to return an incorrect average. The tests failed because they were designed based on the assumption that the first k elements must be included in the sum. The fix way is to change it back to i = 0.
       
 g) Measure the code coverage using a code coverage tools such as EclEmma. Your test case must achieve 100% branch coverage.
-   1. Cobertura is described in Appendix C
-   2. EclEmma is a Java code coverage analysis for the Eclipse IDE. Check http://www.eclemma.org/ for updates, documentation and support.
-      
+   ![](https://github.com/UTDClassroomOrg/hw3-testing-Khanh-Doan-/blob/main/coverage.png)
+
+   # Sources:
+- Dr. Kung Book Chapter 20 (Black Box)
+- Eclipse with JUnit Test
+- https://www.youtube.com/watch?v=v2F49zLLj-8
+  
